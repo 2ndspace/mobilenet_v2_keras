@@ -50,10 +50,10 @@ def get_tf_mobilenet_v2_items(alpha, rows):
     base_name = 'mobilenet_v2_' + str(alpha) + '_' + str(rows)
     base_path = os.path.join(model_path, base_name)
 
-    url = 'https://storage.googleapis.com/mobilenet_v2/checkpoints/' + base_name + '.tgz'
-    print('Downloading from ', url)
+    #url = 'https://storage.googleapis.com/mobilenet_v2/checkpoints/' + base_name + '.tgz'
+    #print('Downloading from ', url)
 
-    urllib.request.urlretrieve(url, model_path + '.tgz')
+    #urllib.request.urlretrieve(url, model_path + '.tgz')
     tar = tarfile.open(model_path + '.tgz', "r:gz")
     tar.extractall(model_path)
     tar.close()
